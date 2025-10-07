@@ -1,0 +1,220 @@
+---
+id: 4
+slug: lezione-4
+title: "Lezione 4 - Strumenti per Contenuti Multimediali"
+---
+
+### Alla fine di questa lezione saprai:
+
+- Come rendere video e audio accessibili
+- Strumenti per creare sottotitoli
+- Come gestire contenuti multimediali inclusivi
+
+---
+
+### Sottotitoli e Trascrizioni
+
+I **sottotitoli** sono essenziali per:
+
+- Persone sorde o ipoacusiche
+- Chi guarda video in ambienti rumorosi
+- Chi sta imparando una lingua
+- Migliore comprensione per tutti
+
+**Tipi di sottotitoli:**
+
+- **Closed captions**: include suoni, musica, effetti
+- **Sottotitoli standard**: solo dialoghi
+- **SDH** (Subtitles for Deaf and Hard of hearing): descrittivi
+
+---
+
+### Strumenti per Creare Sottotitoli
+
+**Automatici:**
+
+- **YouTube**: sottotitoli auto-generati (da correggere!)
+- **Rev.com**: servizio professionale
+- **Otter.ai**: trascrizione video meeting
+- **Descript**: editor video con trascrizione integrata
+
+**Manuali:**
+
+- **Subtitle Edit**: editor gratuito, completo
+- **Aegisub**: avanzato, per anime e video
+- **Amara**: piattaforma collaborativa
+
+**Formati comuni:**
+
+- SRT (SubRip)
+- VTT (WebVTT)
+- ASS (Advanced SubStation)
+
+<Banner type="info" title="YouTube Studio">
+  YouTube genera sottotitoli automatici, ma hanno circa 70% di accuratezza.
+  Correggili sempre manualmente!
+</Banner>
+
+---
+
+### Audiodescrizione
+
+L'**audiodescrizione** descrive elementi visivi durante pause nel dialogo:
+
+- Azioni importanti
+- Cambi di scena
+- Espressioni facciali
+- Testo sullo schermo
+
+**Dove inserirla:**
+
+- Pause naturali nel dialogo
+- Traccia audio separata
+- Versione alternativa del video
+
+**Strumenti:**
+
+- **YouDescribe**: piattaforma collaborativa
+- Servizi professionali di audiodescrizione
+- Script personalizzati
+
+---
+
+### Creare Video Accessibili
+
+**Checklist video accessibile:**
+
+- [ ] Sottotitoli accurati e sincronizzati
+- [ ] Trascrizione testuale completa
+- [ ] Contrasto sufficiente per testo sovrapposto
+- [ ] Audio chiaro senza rumori di fondo
+- [ ] Alternativa testuale per info essenziali
+- [ ] Player video accessibile da tastiera
+- [ ] Controlli chiari e ben etichettati
+
+---
+
+### Podcast e Audio
+
+**Rendere podcast accessibili:**
+
+**Trascrizioni:**
+
+- Trascrizione completa dell'episodio
+- Timestamp per navigazione facile
+- Note aggiuntive per contesto
+
+**Metadata:**
+
+- Titolo descrittivo
+- Descrizione dell'episodio
+- Tag appropriati
+
+**Piattaforme:**
+
+- Molte supportano trascrizioni automatiche
+- Sempre meglio correggere manualmente
+
+<Banner type="info" title="Benefici delle trascrizioni">
+  Le trascrizioni migliorano SEO, permettono ricerca nel contenuto e aiutano
+  tutti (anche chi preferisce leggere)!
+</Banner>
+
+---
+
+### Strumenti di Editing Accessibili
+
+**Video Editing:**
+
+- **DaVinci Resolve**: accessibile con screen reader
+- **Adobe Premiere Pro**: miglioramenti continui
+- **iMovie**: semplice, accessibilità integrata
+
+**Audio Editing:**
+
+- **Audacity**: gratuito, accessibile
+- **Adobe Audition**: professionale
+- **Reaper**: altamente personalizzabile
+
+---
+
+### Live Streaming Accessibile
+
+Per streaming live:
+
+**Sottotitoli in tempo reale:**
+
+- **OBS + plugin**: sottotitoli automatici
+- **Twitch**: sottotitoli integrati
+- **Zoom**: live transcription
+
+**Lingua dei Segni:**
+
+- Picture-in-Picture per interprete LIS
+- Posizionamento visibile ma non invasivo
+- Sfondo contrastante
+
+---
+
+### Immagini nei Video
+
+Quando mostri testo o immagini:
+
+- **Leggi ad alta voce** il contenuto
+- **Lascia tempo** per leggere
+- **Contrasto sufficiente** per leggibilità
+- **Dimensioni adeguate** del testo
+
+---
+
+### Piattaforme Video Accessibili
+
+**YouTube:**
+
+- Sottotitoli automatici migliorabili
+- Capitoli per navigazione
+- Trascrizione automatica
+
+**Vimeo:**
+
+- Supporto caption nativo
+- Player accessibile
+- Opzioni di qualità video
+
+**Accessibilità player:**
+
+- Controlli grandi e chiari
+- Shortcuts da tastiera
+- Informazioni ARIA per screen reader
+
+<Banner type="info" title="Standard HTML5">
+  Usa il tag `<video>` HTML5 con `<track>` per sottotitoli. È lo standard e funziona ovunque!
+</Banner>
+
+---
+
+### Esempio HTML5 Video Accessibile
+
+```html
+<video controls>
+  <source src="video.mp4" type="video/mp4" />
+  <track
+    kind="captions"
+    src="sottotitoli-it.vtt"
+    srclang="it"
+    label="Italiano"
+    default
+  />
+  <track
+    kind="descriptions"
+    src="audiodescrizione.vtt"
+    srclang="it"
+    label="Audiodescrizione"
+  />
+  Il tuo browser non supporta il tag video.
+</video>
+```
+
+---
+
+I contenuti multimediali accessibili raggiungono un pubblico più ampio e sono migliori per tutti!

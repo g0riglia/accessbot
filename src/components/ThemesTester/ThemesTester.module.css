@@ -1,0 +1,82 @@
+.container {
+  border: 2px solid var(--color-primary);
+  padding: 1em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.canvas {
+  padding: 1.25em;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.bigText {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons > button {
+  background-color: inherit;
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 8px;
+  padding: 1.5em 1em;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.buttons > button > svg {
+  width: 32px;
+  height: 32px;
+  color: var(--color-primary);
+}
+
+.contrastIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-lighter) 0%,
+    var(--color-primary-lighter) 50%,
+    var(--color-primary) 50%,
+    var(--color-primary) 100%
+  );
+}
+
+.contrastIcon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-text);
+  transform: translateY(-50%) rotate(90deg);
+  opacity: 0.3;
+}
+
+.light {
+  background-color: #f3f3f3;
+  color: #1c1b1b;
+}
+
+.dark {
+  background-color: #202020;
+  color: #f4f4f4;
+}
+
+.highContrast {
+  background-color: #0c0c0c;
+  color: #f6ff00;
+}

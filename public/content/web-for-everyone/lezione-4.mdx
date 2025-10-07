@@ -1,0 +1,144 @@
+---
+id: 4
+slug: lezione-4
+title: "Lezione 4 - Navigazione da Tastiera"
+---
+
+### Alla fine di questa lezione saprai:
+
+- Perché la navigazione da tastiera è essenziale
+- Come garantire che il tuo sito sia navigabile con Tab
+- Come gestire focus e skip links
+
+---
+
+### Perché la Tastiera?
+
+Molte persone non possono usare il mouse per diversi motivi:
+
+- Disabilità motorie
+- Utilizzo di tecnologie assistive
+- Preferenze personali
+- Situazioni temporanee (mouse rotto)
+
+**Tutti i contenuti interattivi devono essere accessibili da tastiera!**
+
+---
+
+### Navigazione di Base
+
+**Tasti principali:**
+
+- **Tab**: Naviga al prossimo elemento
+- **Shift + Tab**: Torna all'elemento precedente
+- **Enter**: Attiva link o pulsanti
+- **Spazio**: Attiva pulsanti o checkbox
+- **Frecce**: Navigano in liste, radio button, menu
+
+<Banner type="info" title="Prova tu!">
+  Prova a navigare questo sito usando solo la tastiera. Riesci a raggiungere
+  tutti gli elementi interattivi?
+</Banner>
+
+---
+
+### Focus Visibile
+
+Il **focus** indica quale elemento è attualmente selezionato. Deve essere:
+
+- **Sempre visibile**: mai nascosto con `outline: none`
+- **Con contrasto sufficiente**: visibile su tutti gli sfondi
+- **Coerente**: stesso stile in tutto il sito
+
+**Esempio CSS corretto:**
+
+```css
+/* ✅ Focus personalizzato ma visibile */
+button:focus {
+  outline: 3px solid #1e88e5;
+  outline-offset: 2px;
+}
+
+/* ❌ MAI fare questo! */
+button:focus {
+  outline: none;
+}
+```
+
+---
+
+### Ordine Logico del Focus
+
+L'ordine di tabulazione deve seguire un flusso logico:
+
+1. Header e navigazione principale
+2. Contenuto principale
+3. Sidebar (se presente)
+4. Footer
+
+**Evita:**
+
+- Usare `tabindex` con valori positivi
+- Ordini di focus illogici o confusi
+
+**Usa:**
+
+- `tabindex="0"` per rendere elementi non interattivi focusabili
+- `tabindex="-1"` per rimuovere dal flusso di tabulazione
+
+---
+
+### Skip Links
+
+I **skip links** permettono di saltare la navigazione ripetitiva:
+
+```html
+<!-- Link nascosto visivamente ma accessibile da tastiera -->
+<a href="#main-content" class="skip-link"> Salta al contenuto principale </a>
+
+<nav><!-- Navigazione --></nav>
+
+<main id="main-content">
+  <!-- Contenuto principale -->
+</main>
+```
+
+Questo aiuta gli utenti a non dover navigare 50+ link per raggiungere il contenuto!
+
+<Banner type="info" title="Best Practice">
+  I skip links dovrebbero apparire visibili quando ricevono il focus da
+  tastiera.
+</Banner>
+
+---
+
+### Gestione dei Modali
+
+Quando apri un modale:
+
+1. **Sposta il focus** sul modale
+2. **Intrappola il focus** dentro il modale (Tab cicla solo dentro)
+3. **Permetti ESC** per chiudere
+4. **Ripristina il focus** all'elemento che ha aperto il modale
+
+---
+
+### Checklist Tastiera
+
+- [ ] Tutti i link e pulsanti sono raggiungibili con Tab
+- [ ] Il focus è sempre visibile
+- [ ] L'ordine di tabulazione è logico
+- [ ] Ho aggiunto skip links
+- [ ] I modali gestiscono correttamente il focus
+- [ ] Posso usare il sito senza mouse
+
+---
+
+### Prova Pratica
+
+Sfida: prova a completare queste azioni usando SOLO la tastiera:
+
+1. Navigare al menu principale
+2. Aprire una pagina
+3. Compilare un form
+4. Chiudere un modale (se presente)

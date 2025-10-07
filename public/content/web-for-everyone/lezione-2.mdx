@@ -1,0 +1,110 @@
+---
+id: 2
+slug: lezione-2
+title: "Lezione 2 - Testo Alternativo e Immagini"
+---
+
+### Alla fine di questa lezione saprai:
+
+- Cos'è il testo alternativo e perché è fondamentale
+- Come scrivere buone descrizioni alternative
+- Quando usare alt vuoto e quando evitarlo
+
+---
+
+### Cosa Sono i Testi Alternativi?
+
+Il **testo alternativo (alt text)** è una descrizione testuale di un'immagine che viene letta dagli screen reader per utenti non vedenti o ipovedenti.
+
+Senza testo alternativo, una persona che usa uno screen reader sentirebbe solo "immagine" senza sapere cosa rappresenta.
+
+<Banner type="info" title="Buone pratiche">
+  Un buon testo alternativo descrive il contenuto e la funzione dell'immagine in
+  modo conciso e chiaro.
+</Banner>
+
+---
+
+### Come Scrivere un Buon Alt Text
+
+**✅ Buoni esempi:**
+
+- `alt="Ragazza che sorride mentre usa il computer"`
+- `alt="Grafico a torta che mostra la distribuzione: 60% desktop, 40% mobile"`
+- `alt="Logo AccessBot - robot blu con la lettera A"`
+
+**❌ Cattivi esempi:**
+
+- `alt="immagine"` (troppo generico)
+- `alt="IMG_1234.jpg"` (nome file)
+- `alt="Una bellissima foto meravigliosa di una persona fantastica che..."` (troppo lungo)
+
+---
+
+### Regole Importanti
+
+**Quando usare alt vuoto (`alt=""`):**
+
+- Immagini puramente decorative
+- Icone accompagnate da testo visibile
+- Immagini duplicate
+
+**Quando descrivere l'immagine:**
+
+- Immagini informative (foto, diagrammi, grafici)
+- Immagini funzionali (pulsanti, link)
+- Immagini di testo
+
+---
+
+### Esempi Pratici
+
+```html
+<!-- Immagine informativa ✅ -->
+<img src="cat.jpg" alt="Gatto arancione che dorme su un cuscino blu" />
+
+<!-- Immagine decorativa ✅ -->
+<img src="decorative-line.png" alt="" />
+
+<!-- Link con immagine ✅ -->
+<a href="/home">
+  <img src="logo.png" alt="Torna alla home" />
+</a>
+
+<!-- Immagine complessa ✅ -->
+<img src="chart.png" alt="Grafico: crescita utenti da 100k a 500k in 6 mesi" />
+```
+
+<Banner type="info" title="Consiglio Pro">
+  Se un'immagine contiene informazioni importanti (come un grafico), considera
+  di fornire anche una descrizione lunga o una tabella dati accessibile.
+</Banner>
+
+---
+
+### Testo Alternativo nei Social Media
+
+Anche sui social media puoi (e dovresti!) aggiungere testo alternativo:
+
+- **Instagram**: Impostazioni avanzate → Scrivi testo alternativo
+- **Twitter/X**: Attiva descrizioni immagini nelle impostazioni
+- **Facebook**: Modifica foto → Testo alternativo
+- **LinkedIn**: Aggiungi descrizione quando carichi l'immagine
+
+---
+
+### Checklist Rapida
+
+Prima di pubblicare un'immagine, chiediti:
+
+- [ ] L'immagine trasmette informazioni importanti?
+- [ ] Il mio alt text è conciso (max 125 caratteri)?
+- [ ] Ho descritto cosa si vede, non solo "un'immagine di..."?
+- [ ] Se è decorativa, ho usato `alt=""`?
+- [ ] Ho evitato "immagine di" o "foto di" (è già implicito)?
+
+---
+
+### Esercitazione
+
+Pensa a 3 immagini che hai sul tuo telefono e prova a scrivere un testo alternativo efficace per ognuna!

@@ -1,95 +1,68 @@
-import Image from "next/image";
+"use client";
 import styles from "./page.module.css";
+import Slides from "@/components/Slides";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export default function Home() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <motion.section
+        className={styles.onboarding}
+        aria-label="Introduzione ad AccessBot"
+        initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: shouldReduceMotion ? 0 : 0.5 }}
+      >
+        <Slides />
+        <Link href="/assistant" className={styles.startBtn}>
+          Comincia il tuo percorso
+        </Link>
+      </motion.section>
+      <motion.section
+        className={styles.aboutUs}
+        aria-labelledby="about-heading"
+        initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: shouldReduceMotion ? 0 : 0.5,
+          delay: shouldReduceMotion ? 0 : 0.2,
+        }}
+      >
+        <h2 id="about-heading">Chi siamo</h2>
+        <p>
+          AccessBot nasce all'interno del PCTO <strong>"Include To Win"</strong>
+          , realizzato dall'<strong>I.T.I. Augusto Righi di Napoli</strong> in
+          collaborazione con il centro <strong>Sinapsi</strong> dell'Università
+          Federico II e l'azienda americana <strong>Micron</strong>. La nostra
+          missione non è solo creare un web accessibile, ma costruire un mondo
+          più inclusivo per tutti.
+        </p>
+      </motion.section>
 
-        <div className={styles.ctas}>
+      <motion.footer
+        className={styles.footer}
+        initial={shouldReduceMotion ? {} : { opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: shouldReduceMotion ? 0 : 0.5,
+          delay: shouldReduceMotion ? 0 : 0.4,
+        }}
+      >
+        <p>
+          Sviluppato da{" "}
           <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/raffaele-nini-b21703373/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Raffaele Nini
           </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </p>
+      </motion.footer>
     </div>
   );
 }

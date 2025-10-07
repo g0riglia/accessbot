@@ -1,0 +1,230 @@
+.page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 5em;
+  padding: 1em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.headerText h1 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5em;
+}
+
+.headerText p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+}
+
+.kpiSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+.kpiCard {
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: all 0.3s ease;
+}
+
+.kpiCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px var(--color-shadow-strong);
+}
+
+.kpiIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.kpiIcon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.kpiContent h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.25em;
+}
+
+.kpiContent p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.filterButtons {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+  justify-content: center;
+}
+
+.filterButtons button {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-message-user);
+  padding: 0.75em 1.5em;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--color-text);
+}
+
+.filterButtons button:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.filterButtons button.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.chartsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2em;
+  margin-bottom: 3em;
+}
+
+.chartCard {
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.chartCard h3 {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid var(--color-primary-lighter);
+}
+
+.cta {
+  background: linear-gradient(135deg, #1e88e5 0%, #42a5f5 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 3em 2em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.cta h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5em;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+  opacity: 0.95;
+}
+
+.cta a {
+  display: inline-block;
+  background-color: white;
+  color: var(--color-primary);
+  padding: 1em 2em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.cta a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5em;
+  background-color: var(--color-primary-lighter);
+  border-radius: 8px;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .headerText h1 {
+    font-size: 1.5rem;
+  }
+
+  .headerText p {
+    font-size: 1rem;
+  }
+
+  .exitButton {
+    align-self: flex-end;
+  }
+
+  .kpiSection {
+    grid-template-columns: 1fr;
+  }
+
+  .filterButtons {
+    flex-direction: column;
+  }
+
+  .chartsSection {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 2em 1.5em;
+  }
+
+  .cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .kpiSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chartsSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

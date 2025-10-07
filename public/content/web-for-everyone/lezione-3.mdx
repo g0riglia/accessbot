@@ -1,0 +1,118 @@
+---
+id: 3
+slug: lezione-3
+title: "Lezione 3 - Colori e Contrasto nel Web"
+---
+
+### Alla fine di questa lezione saprai:
+
+- Come verificare il contrasto dei colori
+- Quali sono i rapporti di contrasto richiesti dalle WCAG
+- Come scegliere palette di colori accessibili
+
+---
+
+### Il Rapporto di Contrasto
+
+Il **rapporto di contrasto** misura la differenza di luminosità tra testo e sfondo. Si esprime come `X:1` (esempio: `4.5:1`).
+
+**Standard WCAG:**
+
+- **Testo normale**: minimo 4.5:1 (Livello AA)
+- **Testo grande** (18pt+): minimo 3:1 (Livello AA)
+- **Livello AAA**: 7:1 per testo normale, 4.5:1 per testo grande
+
+<Banner type="info" title="Verifica facile">
+  Usa strumenti gratuiti come WebAIM Contrast Checker o i DevTools del browser
+  per verificare il contrasto!
+</Banner>
+
+---
+
+### Errori Comuni
+
+**❌ Cosa evitare:**
+
+- Testo grigio chiaro su sfondo bianco
+- Link blu chiaro su sfondo blu
+- Testo giallo su sfondo bianco
+- Affidarsi solo al colore per trasmettere informazioni
+
+**✅ Soluzioni:**
+
+- Usa colori con contrasto sufficiente
+- Aggiungi icone o sottotitoli oltre al colore
+- Testa con strumenti di verifica contrasto
+
+---
+
+### Daltonismo e Accessibilità
+
+Circa l'8% degli uomini e lo 0.5% delle donne ha una forma di daltonismo. Le più comuni sono:
+
+- **Deuteranopia**: difficoltà con rosso-verde
+- **Protanopia**: difficoltà con rosso
+- **Tritanopia**: difficoltà con blu-giallo
+
+**Come progettare per il daltonismo:**
+
+- Non usare solo il colore per distinguere elementi
+- Usa pattern, icone o testo
+- Evita combinazioni rosso/verde, rosso/marrone
+- Testa con simulatori di daltonismo
+
+<Banner type="info" title="Tool consigliati">
+  Usa estensioni browser come "Colorblind - Dalton" o "Color Oracle" per
+  simulare diverse forme di daltonismo.
+</Banner>
+
+---
+
+### Palette Accessibili
+
+Esempi di combinazioni con buon contrasto:
+
+**Tema Chiaro:**
+
+- Nero (`#000000`) su bianco (`#FFFFFF`) - 21:1 ✅
+- Blu scuro (`#1E3A8A`) su bianco - 12:1 ✅
+- Verde scuro (`#065F46`) su bianco - 8.5:1 ✅
+
+**Tema Scuro:**
+
+- Bianco (`#FFFFFF`) su nero (`#000000`) - 21:1 ✅
+- Giallo chiaro (`#FEF08A`) su blu scuro (`#1E293B`) - 11:1 ✅
+- Verde chiaro (`#86EFAC`) su grigio scuro (`#1F2937`) - 9:1 ✅
+
+---
+
+### Link e Stati Interattivi
+
+I link devono essere facilmente riconoscibili:
+
+- **Contrasto sufficiente** dal testo normale
+- **Sottolineati** per default
+- **Stati hover/focus** ben visibili
+- **Non solo il colore** per indicare che sono cliccabili
+
+---
+
+### Checklist Colori
+
+Prima di pubblicare, verifica:
+
+- [ ] Tutti i testi hanno contrasto minimo 4.5:1
+- [ ] I titoli grandi hanno contrasto minimo 3:1
+- [ ] Non uso solo il colore per trasmettere info
+- [ ] I link sono distinguibili dal testo normale
+- [ ] Ho testato con simulatore daltonismo
+- [ ] Gli stati hover/focus sono ben visibili
+
+---
+
+### Strumenti Utili
+
+- **WebAIM Contrast Checker**: Verifica rapporti di contrasto
+- **Coolors**: Generatore palette accessibili
+- **Stark**: Plugin Figma per accessibilità
+- **Color Safe**: Palette con contrasto garantito

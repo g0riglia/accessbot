@@ -1,0 +1,159 @@
+---
+id: 3
+slug: lezione-3
+title: "Lezione 3 - Tecnologie Assistive"
+---
+
+### Alla fine di questa lezione saprai:
+
+- Cosa sono le tecnologie assistive
+- Come funzionano gli screen reader
+- Altri strumenti utilizzati da persone con disabilità
+
+---
+
+### Cosa Sono le Tecnologie Assistive?
+
+Le **tecnologie assistive** sono strumenti che aiutano le persone con disabilità a utilizzare la tecnologia:
+
+- Screen reader
+- Display Braille
+- Switch e joystick adattivi
+- Software di riconoscimento vocale
+- Eye tracking
+
+---
+
+### Screen Reader
+
+Gli **screen reader** convertono testo in audio o Braille:
+
+**Più popolari:**
+
+- **NVDA** (Windows, gratuito)
+- **JAWS** (Windows, a pagamento)
+- **VoiceOver** (Mac, iOS, integrato)
+- **TalkBack** (Android, integrato)
+
+**Come funzionano:**
+
+- Leggono il contenuto in ordine semantico
+- Annunciano intestazioni, link, form
+- Permettono di navigare per elementi (es: tutti i link)
+
+<Banner type="info" title="Prova tu!">
+  Prova VoiceOver (Mac: Cmd+F5) o TalkBack (Android) per capire come gli utenti
+  percepiscono il web!
+</Banner>
+
+---
+
+### Come gli Screen Reader "Leggono" il Web
+
+Gli screen reader si basano su:
+
+**HTML semantico:**
+
+- `<h1>`, `<h2>` per struttura
+- `<nav>`, `<main>`, `<article>` per regioni
+- `<button>` e `<a>` per elementi interattivi
+
+**Attributi ARIA:**
+
+- `aria-label`: etichetta alternativa
+- `aria-describedby`: descrizione aggiuntiva
+- `role`: definisce il ruolo di un elemento
+
+**Ordine del DOM:**
+
+- L'ordine nel codice determina l'ordine di lettura
+- Non sempre coincide con l'ordine visuale (CSS può cambiarlo)
+
+---
+
+### Display Braille
+
+I **display Braille** mostrano testo in Braille tattile:
+
+- Piccoli pin che si alzano e abbassano
+- Costosi (da 1.000€ a 15.000€)
+- Essenziali per utenti sordo-ciechi
+- Si connettono a computer e smartphone
+
+---
+
+### Strumenti per Disabilità Motorie
+
+**Switch Control:**
+
+- Un pulsante per controllare tutto il dispositivo
+- Scansiona elementi sequenzialmente
+- Attivazione con movimento minimo (soffio, movimento testa)
+
+**Tastiere adattive:**
+
+- Tasti più grandi
+- Layout personalizzati
+- Supporti per polsi
+
+**Mouse a tracciamento oculare:**
+
+- Controlla il cursore con gli occhi
+- Tecnologia avanzata ma sempre più accessibile
+
+---
+
+### Software di Riconoscimento Vocale
+
+Permette di controllare il computer parlando:
+
+- **Dragon NaturallySpeaking**: professionale
+- **Dettatura** (integrata in Mac e Windows)
+- **Voice Control** (iOS, Android)
+
+Utile per:
+
+- Disabilità motorie
+- RSI (lesioni da sforzo ripetitivo)
+- Preferenza personale
+
+---
+
+### Ingranditori di Schermo
+
+Software che ingrandiscono porzioni dello schermo:
+
+- **ZoomText** (Windows, professionale)
+- **Zoom** (integrato in Mac, iOS, Android)
+- **Magnifier** (Windows, integrato)
+
+Diverso da aumentare la dimensione del testo: ingrandisce TUTTO (immagini, interfaccia, ecc.)
+
+<Banner type="info" title="Funzionalità integrate">
+  La maggior parte dei dispositivi moderni ha strumenti di accessibilità già
+  integrati. Esplorale nelle impostazioni!
+</Banner>
+
+---
+
+### Progettare per le Tecnologie Assistive
+
+Quando crei contenuti web:
+
+- **Usa HTML semantico** correttamente
+- **Fornisci alternative** (testo alt, trascrizioni)
+- **Permetti personalizzazione** (zoom, colori)
+- **Testa con strumenti reali** (screen reader, solo tastiera)
+
+---
+
+### Risorse per Testare
+
+- **NVDA**: scaricabile gratuitamente
+- **VoiceOver**: già su Mac/iPhone
+- **TalkBack**: già su Android
+- **Estensioni browser**: simulatori di disabilità visive
+
+---
+
+L'accessibilità inizia dalla comprensione degli strumenti che le persone usano realmente!

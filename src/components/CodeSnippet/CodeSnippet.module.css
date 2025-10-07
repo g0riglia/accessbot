@@ -1,0 +1,16 @@
+.wrapper {
+  border-radius: 8px !important;
+  margin: 1em 0 !important;
+  overflow-x: auto !important;
+  max-width: 100% !important;
+}
+
+.wrapper pre {
+  overflow-x: auto !important;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    font-size: 0.85rem !important;
+  }
+}

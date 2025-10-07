@@ -1,0 +1,48 @@
+.page {
+  width: 90%;
+  margin: 0 auto 5em;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-input-bg);
+  border-radius: 20px;
+  padding: 1em 1.25em;
+}
+
+.backToPaths {
+  display: flex;
+  gap: 0.5em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+
+.lessonContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1.5em;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5em;
+  align-items: center;
+}
+
+.nextLesson,
+.prevLesson {
+  display: flex;
+  gap: 0.5em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nextLesson {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}

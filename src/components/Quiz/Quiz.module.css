@@ -1,0 +1,152 @@
+.quizContainer {
+  border: 2px solid var(--color-primary);
+  border-radius: 15px;
+  padding: 2em;
+  margin: 2em 0;
+  background-color: var(--color-surface);
+}
+
+.progress {
+  margin-bottom: 2em;
+}
+
+.progress p {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5em;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-primary-lighter);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.question {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 1.5em;
+  line-height: 1.4;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.answer {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-message-user);
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  color: var(--color-text);
+}
+
+.answer:hover {
+  border-color: var(--color-primary);
+  transform: translateX(5px);
+}
+
+.answer.selected {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.prevButton,
+.nextButton,
+.retryButton {
+  padding: 0.75em 1.5em;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prevButton {
+  background-color: var(--color-message-user);
+  color: var(--color-text);
+}
+
+.prevButton:hover {
+  background-color: var(--color-primary-lighter);
+}
+
+.nextButton,
+.retryButton {
+  background-color: var(--color-primary);
+  color: white;
+  margin-left: auto;
+}
+
+.nextButton:hover,
+.retryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+}
+
+.results {
+  border: 2px solid var(--color-primary);
+  border-radius: 15px;
+  padding: 2em;
+  margin: 2em 0;
+  background-color: var(--color-surface);
+  text-align: center;
+}
+
+.results h3 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1em;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2em;
+}
+
+.retryButton {
+  margin-top: 2em;
+}
+
+@media (max-width: 768px) {
+  .quizContainer,
+  .results {
+    padding: 1.5em;
+  }
+
+  .question {
+    font-size: 1.25rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .nextButton {
+    margin-left: 0;
+  }
+}

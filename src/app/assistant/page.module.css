@@ -1,0 +1,130 @@
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0 5em;
+}
+
+.page > h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  flex-shrink: 0;
+}
+
+.chat {
+  background-color: var(--color-surface);
+  border-radius: 15px;
+  box-shadow: 0 0 30px var(--color-shadow);
+  width: 95%;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100%;
+  flex: 1;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 500px; /* Fixed height */
+  overflow-y: auto;
+  padding: 0;
+}
+
+.messageBot,
+.messageUser {
+  padding: 0.6em 0.8em;
+  border-radius: 25px;
+  max-width: 90%;
+  list-style-type: none;
+}
+
+.messageBot {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  align-self: flex-start;
+  border-bottom-left-radius: 3px;
+}
+
+.messageUser {
+  background-color: var(--color-message-user);
+  align-self: flex-end;
+  border-bottom-right-radius: 3px;
+}
+
+.inputArea {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.faq {
+  display: flex;
+  gap: 0.5em;
+  overflow-x: scroll;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.faq > button {
+  background-color: var(--color-message-user);
+  border: none;
+  border-radius: 6px;
+  white-space: nowrap;
+  padding: 0.5em;
+}
+
+.input {
+  padding: 0.3em 0.6em;
+  border-radius: 30px;
+  background-color: var(--color-input-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input > input {
+  border: none;
+  background-color: inherit;
+  width: 80%;
+  color: var(--color-text);
+}
+
+.input > input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5em;
+}
+
+.buttons > button {
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons > button > svg {
+  width: 18px;
+}
+
+.micBtn {
+  background-color: inherit;
+}
+
+.sendBtn {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}

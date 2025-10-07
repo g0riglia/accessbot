@@ -1,0 +1,151 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slidesWrapper {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  width: 33.333%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.slide h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.slide p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  max-width: 300px;
+}
+
+.slidesButtons {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  top: 50%;
+  width: 95%;
+  max-width: 500px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.slidesButtons button {
+  background: var(--color-primary);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.slidesButtons button:hover {
+  background: var(--color-primary-hover);
+  transform: scale(1.1);
+}
+
+.slidesButtons button:active {
+  transform: scale(0.95);
+}
+
+.slidesButtons button svg {
+  color: white;
+  width: 20px;
+  height: 20px;
+}
+
+.slidesButtons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.slidesButtons button:disabled:hover {
+  background: #58abf4;
+  transform: none;
+}
+
+.slidesState {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+  color: var(--color-primary);
+}
+
+.slidesState svg {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slidesState svg:hover {
+  transform: scale(1.2);
+}
+
+.slidesState > button {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    height: 350px;
+  }
+
+  .slide {
+    padding: 1.5rem;
+  }
+
+  .slide h1 {
+    font-size: 1.5rem;
+  }
+
+  .slide p {
+    font-size: 0.9rem;
+  }
+
+  .slidesButtons button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slidesButtons button svg {
+    width: 18px;
+    height: 18px;
+  }
+}

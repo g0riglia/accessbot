@@ -1,0 +1,178 @@
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  margin-top: 3em;
+}
+
+.header > img {
+  width: 20%;
+  height: auto;
+  max-width: 100px;
+}
+
+.header > h1 {
+  font-size: 1.5rem;
+}
+
+.form {
+  margin: 1.5em auto 5em;
+  background-color: var(--color-surface);
+  box-shadow: 0 0 30px var(--color-shadow);
+  border-radius: 10px;
+  padding: 1em 1.25em;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.label {
+  font-weight: 500;
+}
+
+.input {
+  border: 1px solid #a1a1a1;
+  padding: 0.5em;
+  border-radius: 6px;
+  margin: 0.5em 0.5em 1em 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.form > input:hover,
+.form > input:focus {
+  border-color: var(--color-text);
+}
+
+.userNames {
+  display: flex;
+  flex-direction: column;
+}
+
+.showPassword {
+  margin-bottom: 1.5em;
+}
+
+.form > button {
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  padding: 0.6em 0.5em;
+  color: var(--color-surface);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form > button:hover,
+.form > button:focus {
+  text-decoration: underline;
+  background-color: #5b91ac;
+}
+
+.footer {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.subtext {
+  text-align: center;
+}
+
+.subtext::before,
+.subtext::after {
+  background-color: var(--color-text);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 12%;
+}
+
+.subtext::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.subtext::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.footer > button {
+  padding: 0.6em;
+}
+
+.googleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  border: 1px solid #a1a1a1;
+  border-radius: 10px;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.googleBtn:hover,
+.googleBtn:focus {
+  font-weight: 500;
+  background-color: var(--color-background);
+}
+
+.register {
+  text-align: center;
+}
+
+.register > button {
+  background-color: inherit;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.register > button:hover,
+.register > button:focus {
+  background-color: var(--color-primay-hover);
+  text-decoration: underline;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* Login colors */
+.success {
+  color: #2f9300;
+}
+
+.loading {
+  color: var(--color-primary);
+}
+
+.error {
+  color: #a20000;
+}
+
+@media (min-width: 768px) {
+  .userNames {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .userNames > .input {
+    width: 100%;
+    margin: 0;
+  }
+}
