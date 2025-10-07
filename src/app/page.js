@@ -10,39 +10,41 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <motion.section
-        className={styles.onboarding}
-        aria-label="Introduzione ad AccessBot"
-        initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: shouldReduceMotion ? 0 : 0.5 }}
-      >
-        <Slides />
-        <Link href="/assistant" className={styles.startBtn}>
-          Comincia il tuo percorso
-        </Link>
-      </motion.section>
-      <motion.section
-        className={styles.aboutUs}
-        aria-labelledby="about-heading"
-        initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: shouldReduceMotion ? 0 : 0.5,
-          delay: shouldReduceMotion ? 0 : 0.2,
-        }}
-      >
-        <h2 id="about-heading">Chi siamo</h2>
-        <p>
-          AccessBot nasce all&apos;interno del PCTO{" "}
-          <strong>&quot;Include To Win&quot;</strong>, realizzato dall&apos;
-          <strong>I.T.I. Augusto Righi di Napoli</strong> in collaborazione con
-          il centro <strong>Sinapsi</strong> dell&apos;Università Federico II e
-          l&apos;azienda americana <strong>Micron</strong>. La nostra missione
-          non è solo creare un web accessibile, ma costruire un mondo più
-          inclusivo per tutti.
-        </p>
-      </motion.section>
+      <div className={styles.container}>
+        <motion.section
+          className={styles.onboarding}
+          aria-label="Introduzione ad AccessBot"
+          initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.5 }}
+        >
+          <Slides />
+          <Link href="/assistant" className={styles.startBtn}>
+            Comincia il tuo percorso
+          </Link>
+        </motion.section>
+        <motion.section
+          className={styles.aboutUs}
+          aria-labelledby="about-heading"
+          initial={shouldReduceMotion ? {} : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: shouldReduceMotion ? 0 : 0.5,
+            delay: shouldReduceMotion ? 0 : 0.2,
+          }}
+        >
+          <h2 id="about-heading">Chi siamo</h2>
+          <p>
+            AccessBot nasce all&apos;interno del PCTO{" "}
+            <strong>&quot;Include To Win&quot;</strong>, realizzato dall&apos;
+            <strong>I.T.I. Augusto Righi di Napoli</strong> in collaborazione
+            con il centro <strong>Sinapsi</strong> dell&apos;Università Federico
+            II e l&apos;azienda americana <strong>Micron</strong>. La nostra
+            missione non è solo creare un web accessibile, ma costruire un mondo
+            più inclusivo per tutti.
+          </p>
+        </motion.section>
+      </div>
 
       <motion.footer
         className={styles.footer}

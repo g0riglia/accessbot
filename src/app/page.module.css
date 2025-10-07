@@ -56,8 +56,8 @@
 }
 
 @media (min-width: 1200px) {
-  .page {
-    flex-direction: row;
+  .container {
+    display: flex;
     align-items: center;
   }
 
