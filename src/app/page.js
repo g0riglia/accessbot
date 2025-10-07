@@ -34,12 +34,13 @@ export default function Home() {
       >
         <h2 id="about-heading">Chi siamo</h2>
         <p>
-          AccessBot nasce all'interno del PCTO <strong>"Include To Win"</strong>
-          , realizzato dall'<strong>I.T.I. Augusto Righi di Napoli</strong> in
-          collaborazione con il centro <strong>Sinapsi</strong> dell'Università
-          Federico II e l'azienda americana <strong>Micron</strong>. La nostra
-          missione non è solo creare un web accessibile, ma costruire un mondo
-          più inclusivo per tutti.
+          AccessBot nasce all&apos;interno del PCTO{" "}
+          <strong>&quot;Include To Win&quot;</strong>, realizzato dall&apos;
+          <strong>I.T.I. Augusto Righi di Napoli</strong> in collaborazione con
+          il centro <strong>Sinapsi</strong> dell&apos;Università Federico II e
+          l&apos;azienda americana <strong>Micron</strong>. La nostra missione
+          non è solo creare un web accessibile, ma costruire un mondo più
+          inclusivo per tutti.
         </p>
       </motion.section>
 

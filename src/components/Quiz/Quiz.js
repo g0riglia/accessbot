@@ -56,8 +56,8 @@ function Quiz({ questions }) {
         </p>
         {passed ? (
           <Banner type="success" title="Congratulazioni! 🎉">
-            Hai superato il quiz! Ora conosci meglio l'argomento e puoi passare
-            al prossimo percorso.
+            Hai superato il quiz! Ora conosci meglio l&apos;argomento e puoi
+            passare al prossimo percorso.
           </Banner>
         ) : (
           <Banner type="error" title="Non hai superato il quiz">

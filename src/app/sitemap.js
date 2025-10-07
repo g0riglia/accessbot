@@ -1,20 +1,50 @@
-export default function sitemap() {
+export default async function sitemap() {
   const baseUrl = "https://accessbot.netlify.app";
 
   const routes = [
-    "",
-    "/assistant",
-    "/tools",
-    "/paths",
-    "/impact",
-    "/user",
-    "/login",
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: route === "" ? 1.0 : 0.8,
-  }));
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/assistant`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/tools`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/paths`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/impact`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/user`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/login`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+  ];
 
   // Add learning paths
   const paths = [
@@ -26,17 +56,16 @@ export default function sitemap() {
     "accessibilita-quotidiano",
   ];
 
-  const pathRoutes = paths.flatMap((slug) => {
-    // Get number of lessons for each path
-    const lessonCounts = {
-      "dispositivo-accessibile": 6,
-      "web-for-everyone": 6,
-      "accessibilita-basi": 4,
-      "strumenti-che-aiutano": 5,
-      "comunicare-accessibile": 4,
-      "accessibilita-quotidiano": 3,
-    };
+  const lessonCounts = {
+    "dispositivo-accessibile": 6,
+    "web-for-everyone": 6,
+    "accessibilita-basi": 4,
+    "strumenti-che-aiutano": 5,
+    "comunicare-accessibile": 4,
+    "accessibilita-quotidiano": 3,
+  };
 
+  const pathRoutes = paths.flatMap((slug) => {
     const lessons = lessonCounts[slug] || 6;
 
     return Array.from({ length: lessons }, (_, i) => ({
