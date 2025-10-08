@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
 .startBtn {
   text-decoration: none;
   color: var(--color-background);
@@ -58,6 +64,7 @@
 @media (min-width: 1200px) {
   .container {
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
 
